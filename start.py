@@ -32,6 +32,7 @@ class PoemPageHandler(tornado.web.RequestHandler):
         verb = self.get_argument('verb')
         noun3 = self.get_argument('noun3')
         us = self.get_current_user()
+
         self.render('poem.html', roads=noun1, wood=noun2, made=verb,difference=noun3,user = us,ID=session.get('_id'),INFO=session.get('info'))
 
 
